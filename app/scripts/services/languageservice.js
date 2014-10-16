@@ -22,15 +22,18 @@ angular.module('hpApp')
     // *** Header ***
     en_us_dict.header = {
       home : 'Home',
-      about: 'About'
+      project: 'Project',
+      contact: 'Contact'
     };
     zh_tw_dict.header = {
       home : '首頁',
-      about: '關於'
+      project: '項目',
+      contact: '連絡'
     };
     ja_jp_dict.header = {
       home : 'ホーム',
-      about: 'お問い合わせ'
+      project: 'プロジェクト',
+      contact: '連絡'
     };
 
     // *** Main ***

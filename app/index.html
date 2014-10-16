@@ -26,11 +26,11 @@
           <li ng-class="headerClass('home')">
             <a ng-href="#/home"><span ng-bind="lookupHeader('home')"></span></a>
           </li>
-          <li ng-class="headerClass('about')">
-            <a ng-href="#/about"><span ng-bind="lookupHeader('about')"></span></a>
+          <li ng-class="headerClass('project')">
+            <a ng-href="#/project"><span ng-bind="lookupHeader('project')"></span></a>
           </li>
-          <li>
-            <a ng-href="#"><span ng-bind="lookupHeader('')"></span></a>
+          <li ng-class="headerClass('contact')">
+            <a ng-href="#/contact"><span ng-bind="lookupHeader('contact')"></span></a>
           </li>
         </ul>
         <h3 class="text-muted">hp</h3>
@@ -104,8 +104,11 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/services/languageservice.js"></script>
+    <script src="scripts/services/githubreposervice.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/project.js"></script>
+    <script src="scripts/controllers/contact.js"></script>
         <!-- endbuild -->
 </body>
 </html>

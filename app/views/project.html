@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1>Hello, world!</h1>
+  <p>...</p>
+  <p><a class="btn btn-primary" role="button">Learn more</a></p>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="repo in repos">
+    <div class="thumbnail">
+      <div class="caption" style="overflow: hidden">
+        <h3><a ng-href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h3>
+        <p>{{repo.description || 'No Description'}}</p>
+        <span class="octicon octicon-star"></span>
+        <div>
+          <a ng-href="{{repo.html_url}}"  class="btn btn-primary" role="button">Check repository</a>
+          <a ng-href="{{repo.html_url+'/archive/master.zip'}}"  class="btn btn-info" role="button">Download ZIP</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
