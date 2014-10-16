@@ -1,0 +1,123 @@
+'use strict';
+
+/**
+ * @ngdoc service
+ * @name hpApp.languageService
+ * @description
+ * # languageService
+ * Service in the hpApp.
+ */
+angular.module('hpApp')
+  .service('languageService', function languageService () {
+    // AngularJS will instantiate a singleton by calling "new" on this function
+
+    // ------------ Start Dictionary Definitions ---------------
+    // initialize dictionaries for each language
+    var
+      en_us_dict = {},
+      zh_tw_dict = {},
+      ja_jp_dict = {}
+      ;
+
+    // *** Header ***
+    en_us_dict.header = {
+      home : 'Home',
+      about: 'About'
+    };
+    zh_tw_dict.header = {
+      home : '首頁',
+      about: '關於'
+    };
+    ja_jp_dict.header = {
+      home : 'ホーム',
+      about: 'お問い合わせ'
+    };
+
+    // *** Main ***
+    en_us_dict.main = {
+      test: 'Hey this is my test'
+    };
+    zh_tw_dict.main = {
+
+    };
+    ja_jp_dict.main = {
+
+    };
+
+    // *** Footer ***
+    en_us_dict.footer = {
+      choose_language: 'Language ',
+      language_name : {
+        en_us: 'English',
+        zh_tw: 'Traditional Chinese',
+        ja_jp: 'Japanese'
+      }
+    };
+    zh_tw_dict.footer = {
+      choose_language: '語言 ',
+      language_name : {
+        en_us: '英文',
+        zh_tw: '繁體中文',
+        ja_jp: '日文'
+      }
+    };
+    ja_jp_dict.footer = {
+      choose_language: '言語 ',
+      language_name : {
+        en_us: '英語',
+        zh_tw: '繁體中文',
+        ja_jp: '日本語'
+      }
+    };
+
+    // ------------ End Dictionary Definitions ---------------
+
+    // initialize info for each language
+    var
+      en_us_info = {
+        name: 'English',
+        code: 'en_us',
+        dict: en_us_dict
+      },
+      zh_tw_info = {
+        name: 'Traditional Chinese',
+        code: 'zh_tw',
+        dict: zh_tw_dict
+      },
+      ja_jp_info = {
+        name: 'Japanese',
+        code: 'ja_jp',
+        dict: ja_jp_dict
+      }
+      ;
+
+    var languages = [
+      en_us_info, zh_tw_info, ja_jp_info
+    ];
+
+    // default language is set to English
+    var currentLanguage = languages[0];
+
+    return {
+      getLanguages: function () {
+        return languages;
+      },
+      getCurrentLanguageInfo: function(){
+        return currentLanguage;
+      },
+      setLanguage: function ( setLang ) {
+        var language =languages.filter(function(lang){
+          return (lang.code === setLang)
+        })[0];
+        currentLanguage = language;
+      },
+      lookupPage: function(page){
+        var dict = currentLanguage.dict;
+        return dict[page];
+      },
+      lookupTerm : function ( page, lookup ) {
+        var dict = currentLanguage.dict;
+        return dict[page][lookup];
+      }
+    };
+  });

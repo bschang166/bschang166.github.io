@@ -14,27 +14,46 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="hpApp">
+  <body ng-app="hpApp" ng-controller="BodyCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
     <div class="container">
+      <!-- Header Start -->
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
+          <li ng-class="headerClass('home')">
+            <a ng-href="#/home"><span ng-bind="lookupHeader('home')"></span></a>
+          </li>
+          <li ng-class="headerClass('about')">
+            <a ng-href="#/about"><span ng-bind="lookupHeader('about')"></span></a>
+          </li>
+          <li>
+            <a ng-href="#"><span ng-bind="lookupHeader('')"></span></a>
+          </li>
         </ul>
         <h3 class="text-muted">hp</h3>
       </div>
+      <!-- Header End -->
 
       <div ng-view=""></div>
 
+      <!-- Footer Start -->
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <label class="control-label"><span ng-bind="lookupFooter('choose_language')"></span></label>
+        <div class="btn-group" dropdown is-open="status.isopen">
+          <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+            <span ng-bind="getCurrentLanguageName()"></span> <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li ng-repeat="lang in languages | filter:'!'+getCurrentLanguageInfo().code">
+              <a ng-click="setLanguage(lang.code)">{{lookupFooter('language_name')[lang.code]}}</a>
+            </li>
+          </ul>
+        </div>
       </div>
+      <!-- Footer End -->
     </div>
 
 
@@ -78,13 +97,15 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/languageservice.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
 </body>
 </html>
