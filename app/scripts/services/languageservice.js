@@ -47,6 +47,23 @@ angular.module('hpApp')
 
     };
 
+    // *** Project ***
+    en_us_dict.project = {
+      'bschang166.github.io': 'Hey this is my test',
+      'HackRU-2014': 'hey',
+      'rumaps': 'rumaps'
+    };
+    zh_tw_dict.project = {
+      'bschang166.github.io': 'Hey this is my test',
+      'HackRU-2014': 'hey',
+      'rumaps': 'rumaps'
+    };
+    ja_jp_dict.project = {
+      'bschang166.github.io': 'Hey this is my test',
+      'HackRU-2014': 'hey',
+      'rumaps': 'rumaps'
+    };
+
     // *** Footer ***
     en_us_dict.footer = {
       choose_language: 'Language ',

@@ -1,0 +1,12 @@
+<div class="thumbnail">
+  <div class="caption" style="overflow: hidden">
+    <h3><a ng-href="{{info.html_url}}" target="_blank">{{info.name}}</a></h3>
+    <p>{{info.description || 'No Description'}}</p>
+    <div>
+      <a ng-href="{{info.html_url}}"  class="btn btn-primary" role="button">Check Repository</a>
+      <a ng-href="{{info.html_url+'/archive/master.zip'}}"  class="btn btn-info" role="button">Download ZIP</a>
+    </div>
+    <hr/>
+    <div class="well" ng-transclude></div>
+  </div>
+</div>

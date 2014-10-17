@@ -8,7 +8,7 @@
  * Controller of the hpApp
  */
 angular.module('hpApp')
-  .controller('ProjectCtrl', function ($scope, $timeout, $log, githubRepoService) {
+  .controller('ProjectCtrl', function ($scope, $timeout, $log, languageService, githubRepoService) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -21,4 +21,7 @@ angular.module('hpApp')
       $scope.repos = reposData;
     });
 
+    $scope.lookupRepoTerm = function(repo){
+      return languageService.lookupTerm('project', repo.name);
+    };
   });
