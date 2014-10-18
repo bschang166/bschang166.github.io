@@ -1,13 +1,7 @@
-<div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>...</p>
-  <p><a class="btn btn-primary" role="button">Learn more</a></p>
-</div>
-
 <div class="row">
   <div class="col-sm-6 col-md-4" ng-repeat="repo in repos">
     <github-repo info="repo">
-      {{lookupRepoTerm(repo)}}
+      <div ng-bind-html="lookupRepoTerm(repo) | nl2br"></div>
     </github-repo>
   </div>
 </div>

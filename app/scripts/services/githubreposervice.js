@@ -20,7 +20,7 @@ angular.module('hpApp')
           repos = results.data;
         })
         .error(function(data,status){
-          $log.debug("Error with status: "+status);
+          $log.debug('Error with status: '+status);
           repos = ['There appears to be an error, please try again!'];
         });
     };
@@ -30,7 +30,7 @@ angular.module('hpApp')
     var getRepos = function(callback){
       // check if repos data has been retrieved
       if (!repos){
-        $log.debug("Service repos is not initialized yet, trying again...");
+        $log.debug('Service repos is not initialized yet, trying again...');
         $timeout(getRepos.bind(this,callback), 500);
       } else {
         callback(repos);

@@ -49,12 +49,16 @@ angular.module('hpApp')
 
     // *** Project ***
     en_us_dict.project = {
-      'bschang166.github.io': 'Hey this is my test',
+      'bschang166.github.io': 'This is my Github User Page, built with AngularJS.\n\n' +
+        'Yeoman is used for generating AngularJS scaffold, Grunt for automatic tasks execution, and Bower for dependencies management.\n\n' +
+        'It uses the Github REST API to access and load my repositories.\n\n',
       'HackRU-2014': 'hey',
       'rumaps': 'rumaps'
     };
     zh_tw_dict.project = {
-      'bschang166.github.io': 'Hey this is my test',
+      'bschang166.github.io': '這是我用了AngularJS寫的Github用戶網頁.\n\n' +
+        '主要是以Yeoman製作AngularJS的骨架, Grunt自動化一些工作, 還有Bower管理資源.\n\n' +
+        'Github REST API 用來讀取我的Github repository.\n\n',
       'HackRU-2014': 'hey',
       'rumaps': 'rumaps'
     };
@@ -127,7 +131,7 @@ angular.module('hpApp')
       },
       setLanguage: function ( setLang ) {
         var language =languages.filter(function(lang){
-          return (lang.code === setLang)
+          return (lang.code === setLang);
         })[0];
         currentLanguage = language;
       },
