@@ -109,6 +109,14 @@ $container-max-width: 1200px;
   z-index: 9999;
 }*/
 
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.carousel-indicators {
+  background: rgb(237, 213, 209); /* Fall-back for browsers that don't
+                                    support rgba */
+  background: rgba(109, 123, 237, 0.20);
+}
+
 .github-repo-modal {
   margin-left: auto;
   margin-right: auto;
@@ -116,7 +124,7 @@ $container-max-width: 1200px;
   img {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 50%;
     margin-left: auto;
     margin-right: auto;
   }

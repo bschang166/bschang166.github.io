@@ -4,7 +4,7 @@
   <h3 class="modal-title">{{repoInfo.name}}</h3>
 </div>
 <div class="modal-body">
-  <carousel interval="myInterval">
+  <carousel interval="myInterval" disable-ng-animate>
     <slide ng-repeat="slide in slides" active="slide.active">
       <img ng-src="{{slide.image}}" alt="No preview" />
       <div class="carousel-caption">
