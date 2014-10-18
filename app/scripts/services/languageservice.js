@@ -53,19 +53,25 @@ angular.module('hpApp')
         'Yeoman is used for generating AngularJS scaffold, Grunt for automatic tasks execution, and Bower for dependencies management.\n\n' +
         'It uses the Github REST API to access and load my repositories.\n\n',
       'HackRU-2014': 'hey',
-      'rumaps': 'rumaps'
+      'rumaps': 'rumaps',
+      checkRepo: 'Check Repository',
+      download: 'Download ZIP'
     };
     zh_tw_dict.project = {
       'bschang166.github.io': '這是我用了AngularJS寫的Github用戶網頁.\n\n' +
         '主要是以Yeoman製作AngularJS的骨架, Grunt自動化一些工作, 還有Bower管理資源.\n\n' +
         'Github REST API 用來讀取我的Github repository.\n\n',
       'HackRU-2014': 'hey',
-      'rumaps': 'rumaps'
+      'rumaps': 'rumaps',
+      checkRepo: '查看 Repository',
+      download: '下載 ZIP'
     };
     ja_jp_dict.project = {
       'bschang166.github.io': 'Hey this is my test',
       'HackRU-2014': 'hey',
-      'rumaps': 'rumaps'
+      'rumaps': 'rumaps',
+      checkRepo: 'チェック Repository',
+      download: 'ダウンロード ZIP'
     };
 
     // *** Footer ***
