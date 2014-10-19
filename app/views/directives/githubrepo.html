@@ -13,7 +13,12 @@
 
     <hr/>
 
-    <div class="well text-collapse" ng-class="{'text-show': show}" ng-click="toggleText()" ng-transclude ></div>
+    <accordion>
+      <accordion-group heading="{{lookupRepoTerm('header')}}">
+        <div ng-transclude></div>
+      </accordion-group>
+    </accordion>
+    <!--<div class="well text-collapse" ng-class="{'text-show': show}" ng-click="toggleText()" ng-transclude ></div>-->
   </div>
 
 </div>

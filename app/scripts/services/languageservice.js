@@ -62,7 +62,8 @@ angular.module('hpApp')
 
       'rumaps': 'The aim of this project is to improve the online campus maps of Rutgers University.',
       checkRepo: 'Check Repository',
-      download: 'Download ZIP'
+      download: 'Download ZIP',
+      header: 'Additional Project Information'
     };
     zh_tw_dict.project = {
       'bschang166.github.io': '這是我用了AngularJS寫的Github用戶網頁.\n\n' +
@@ -76,7 +77,8 @@ angular.module('hpApp')
 
       'rumaps': '這個項目的目標是改進Rutgers University的線上地圖.',
       checkRepo: '查看 Repository',
-      download: '下載 ZIP'
+      download: '下載 ZIP',
+      header: '更多情報'
     };
     ja_jp_dict.project = {
       'bschang166.github.io': 'ここのプロジェクトはAngularJSで作ったGithubユーザーページです。\n\n' +
@@ -90,7 +92,8 @@ angular.module('hpApp')
 
       'rumaps': 'このプロジェクトの目的はRutgers Universityのオンラインキャンパス地図の改良です。',
       checkRepo: 'チェック Repository',
-      download: 'ダウンロード ZIP'
+      download: 'ダウンロード ZIP',
+      header: '追加情報'
     };
 
     // *** Footer ***
