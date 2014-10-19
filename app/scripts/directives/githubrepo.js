@@ -16,9 +16,15 @@ angular.module('hpApp')
         info: '='
       },
       link: function(scope, elm, attrs){
+        scope.show = false;
+
         scope.lookupRepoTerm = function(term){
           return languageService.lookupTerm('project',term);
         };
+
+        scope.toggleText = function(){
+          scope.show = !(scope.show);
+        }
 
         scope.open = function (info, size) {
           var modalInstance = $modal.open({

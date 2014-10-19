@@ -129,3 +129,17 @@ $container-max-width: 1200px;
     margin-right: auto;
   }
 }
+
+.text-collapse{
+  line-height: 16px;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: max-height 1.2s ease-in-out;
+
+}
+.text-show {
+  overflow: visible;
+  max-height: 1000px;
+}
