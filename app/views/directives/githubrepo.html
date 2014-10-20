@@ -1,21 +1,29 @@
 <div class="thumbnail">
 
-  <img ng-src="{{'images/' + info.name + '1.png'}}" style="cursor: zoom-in"
-       ng-click="open(info, 'lg')" alt="No preview" />
+  <img ng-src="{{'images/' + repoInfo.name + '1.png'}}" style="cursor: zoom-in"
+       ng-click="open(repoInfo, 'lg')" alt="No preview" />
 
   <div class="caption" style="overflow: hidden">
-    <h3><a ng-href="{{info.html_url}}" target="_blank">{{info.name}}</a></h3>
-    <p>{{info.description || 'No Description'}}</p>
+    <h3><a ng-href="{{repoInfo.html_url}}" target="_blank">{{repoInfo.name}}</a></h3>
+    <p>{{repoInfo.description || 'No Description'}}</p>
     <div>
-      <a ng-href="{{info.html_url}}"  class="btn btn-primary" role="button">{{lookupRepoTerm('checkRepo')}}</a>
-      <a ng-href="{{info.html_url+'/archive/master.zip'}}"  class="btn btn-info" role="button">{{lookupRepoTerm('download')}}</a>
+      <a ng-href="{{repoInfo.html_url}}"  class="btn btn-primary" role="button">{{lookupRepoTerm('checkRepo')}}</a>
+      <a ng-href="{{repoInfo.html_url+'/archive/master.zip'}}"  class="btn btn-info" role="button">{{lookupRepoTerm('download')}}</a>
     </div>
 
     <hr/>
 
     <accordion>
-      <accordion-group heading="{{lookupRepoTerm('header')}}">
-        <div ng-transclude></div>
+      <accordion-group heading="{{lookupRepoTerm('infoHeader')}}">
+        <div ng-bind-html="lookupRepoTerm(repoInfo.name).info| nl2br"></div>
+      </accordion-group>
+    </accordion>
+
+    <accordion>
+      <accordion-group heading="{{lookupRepoTerm('techHeader')}}">
+        <div class="list-group">
+          <a ng-repeat="tech in lookupRepoTerm(repoInfo.name).tech" ng-href="{{tech.url}}" target="blank" class="list-group-item">{{tech.name}}</a>
+        </div>
       </accordion-group>
     </accordion>
     <!--<div class="well text-collapse" ng-class="{'text-show': show}" ng-click="toggleText()" ng-transclude ></div>-->

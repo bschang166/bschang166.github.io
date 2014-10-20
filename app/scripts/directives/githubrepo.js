@@ -13,7 +13,7 @@ angular.module('hpApp')
       restrict: 'E',
       transclude: true,
       scope:{
-        info: '='
+        repoInfo: '='
       },
       link: function(scope, elm, attrs){
         scope.show = false;

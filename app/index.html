@@ -22,7 +22,7 @@
     <div class="container">
       <!-- Header Start -->
       <div class="header">
-        <ul class="nav nav-pills pull-right nav-main">
+        <ul class="nav nav-pills pull-right">
           <li ng-class="headerClass('home')">
             <a ng-href="#/home"><span ng-bind="lookupHeader('home')"></span></a>
           </li>
@@ -33,11 +33,12 @@
             <a ng-href="#/contact"><span ng-bind="lookupHeader('contact')"></span></a>
           </li>
         </ul>
-        <h3 class="text-muted">hp</h3>
       </div>
       <!-- Header End -->
 
-      <div ng-view=""></div>
+      <div class="content">
+        <div ng-view=""></div>
+      </div>
 
       <!-- Footer Start -->
       <div class="footer">

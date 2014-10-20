@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-6 col-md-4" ng-repeat="repo in repos">
-    <github-repo info="repo">
+    <github-repo repo-info="repo">
       <div ng-bind-html="lookupRepoTerm(repo) | nl2br"></div>
     </github-repo>
   </div>
