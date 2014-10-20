@@ -49,13 +49,14 @@ angular.module('hpApp')
       skill: 'My main area of focus currently is web development using Javascript, ' +
         'along with libraries such as jQuery and frameworks such AngularJS for building front-end web applications. ' +
         'I am also skilled in back-end development. My preferred server-side languages are Node.js and PHP, with databases MongoDB and MySQL respectively. ' +
-        'For Node.js, I use ExpressJS as my Node server framework. For PHP, I use XAMPP as my stack development environment in Windows. '
+        'For Node.js, I use ExpressJS as my Node server framework. For PHP, I use XAMPP as my stack development environment in Windows. ',
+      url: 'views/main_en_us.html'
     };
     zh_tw_dict.main = {
-
+      url: 'views/main_zh_tw.html'
     };
     ja_jp_dict.main = {
-
+      url: 'views/main_ja_jp.html'
     };
 
     // *** Project ***

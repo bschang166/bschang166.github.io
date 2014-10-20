@@ -12,4 +12,5 @@ angular.module('hpApp')
     $scope.lookupTerm = function(term){
         return languageService.lookupTerm('main', term);
     };
+
   });
