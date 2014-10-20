@@ -9,8 +9,6 @@
  */
 angular.module('hpApp')
   .service('languageService', function languageService () {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-
     // ------------ Start Dictionary Definitions ---------------
     // initialize dictionaries for each language
     var
@@ -38,7 +36,20 @@ angular.module('hpApp')
 
     // *** Main ***
     en_us_dict.main = {
-      test: 'Hey this is my test'
+      about: 'About Me',
+      intro: 'Hello, my name is Benson and I am a programmer with an engineering background. ',
+      story_head: 'Let me tell you a bit about my story first:\n ',
+      story_content: 'I graduated from college with a bachelor degree in Biomedical Engineering, ' +
+        'and at the time I was considering whether or not to go to graduate school for Biomedical Engineering.' +
+        'It was during that time I decided to look into programming, which I was always interested in but never actively got into before then. ' +
+        'The initial learning was especially difficult since I was self-studying; it was somewhat comparable to learning a new (literal) language. ' +
+        'However once I got past the language syntax (I started with C#), I could start seeing the dots connecting. ' +
+        'From there I started reading books after books, learning not just new languages but how these languages all integrate together. ' +
+        'So here I am now, being able to understand and appreciate all the different programs and websites I used to take for granted everyday. ',
+      skill: 'My main area of focus currently is web development using Javascript, ' +
+        'along with libraries such as jQuery and frameworks such AngularJS for building front-end web applications. ' +
+        'I am also skilled in back-end development. My preferred server-side languages are Node.js and PHP, with databases MongoDB and MySQL respectively. ' +
+        'For Node.js, I use ExpressJS as my Node server framework. For PHP, I use XAMPP as my stack development environment in Windows. '
     };
     zh_tw_dict.main = {
 

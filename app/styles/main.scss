@@ -12,9 +12,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: rgba(144, 238, 144, 0.64);
+  line-height: 1.6em;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -69,7 +67,7 @@ body {
   }
 }
 
-$container-max-width: 1200px;
+$container-max-width: 960px;
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -95,7 +93,7 @@ $container-max-width: 1200px;
 }
 
 .container{
-  padding: 50px;
+  padding: 10px;
   background: #ffffff;
 }
 
@@ -109,7 +107,12 @@ $container-max-width: 1200px;
   z-index: 9999;
 }*/
 
+/* For angularJS ui bootstrap compatibility */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+#intro {
+
+}
 
 .carousel-indicators {
   background: rgb(237, 213, 209); /* Fall-back for browsers that don't

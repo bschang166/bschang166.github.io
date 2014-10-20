@@ -1,4 +1,16 @@
-<h2>About Me</h2>
-<p>
+<section id="about-me">
+  <h2>{{lookupTerm('about')}}</h2>
 
-</p>
+  <section id="intro">
+    <p ng-bind-html="lookupTerm('intro')"></p>
+  </section>
+
+  <section id="story">
+    <h4 ng-bind-html="lookupTerm('story_head') | nl2br"></h4>
+    <p ng-bind-html="lookupTerm('story_content') | nl2br"></p>
+  </section>
+
+  <section id="skill">
+    <p>{{lookupTerm('skill')}}</p>
+  </section>
+</section>
