@@ -63,61 +63,84 @@ angular.module('hpApp')
     var techList = {
       angular: {
         name : 'AngularJS',
-        url : 'https://angularjs.org/'
+        url : 'https://angularjs.org/',
+        keywords: ['javascript', 'framework', 'angular', 'client-side', 'front-end', 'MVC']
       },
       socketio : {
         name: 'Socket.IO',
-        url: 'http://socket.io/'
+        url: 'http://socket.io/',
+        keywords: ['javascript', 'library', 'socket.IO', 'io',
+          'client-side', 'front-end', 'back-end', 'server-side', 'real-time', 'communication']
       },
       typeaheadjs: {
         name: 'Twitter Typeahead.js',
-        url: 'https://twitter.github.io/typeahead.js/'
+        url: 'https://twitter.github.io/typeahead.js/',
+        keywords: ['javascript', 'library', 'typeahead', 'typeaheadjs', 'autocomplete']
+      },
+      jquery: {
+        name: 'jQuery',
+        url: 'http://jquery.com/',
+        keywords: ['javascript', 'library', 'jquery', 'DOM', 'client-side', 'front-end']
       },
       bootstrap: {
         name: 'Twitter Bootstrap',
-        url: 'http://getbootstrap.com/'
+        url: 'http://getbootstrap.com/',
+        keywords: ['javascript', 'framework', 'bootstrap', 'client-side', 'front-end', 'CSS','HTML']
       },
       googleMap: {
         name: 'Google Map API',
-        url: 'https://developers.google.com/maps/'
+        url: 'https://developers.google.com/maps/',
+        keywords: ['javascript', 'API', 'google', 'map', 'client-side', 'front-end']
       },
       githubAPI: {
-        name: 'Github API',
-        url: 'https://developer.github.com/v3/'
+        name: 'GitHub API',
+        url: 'https://developer.github.com/v3/',
+        keywords: ['javascript', 'API', 'github', 'client-side', 'front-end']
       },
       yeoman : {
         name: 'Yeoman',
-        url: 'http://yeoman.io/'
+        url: 'http://yeoman.io/',
+        keywords: ['javascript', 'yeoman', 'generator', 'scaffold', 'angular', 'client-side', 'front-end']
       },
       grunt : {
         name: 'Grunt',
-        url: 'http://gruntjs.com/'
+        url: 'http://gruntjs.com/',
+        keywords: ['javascript', 'grunt', 'task', 'automatic', 'build', 'test', 'client-side', 'front-end']
       },
       bower : {
         name: 'Bower',
-        url: 'http://bower.io/'
+        url: 'http://bower.io/',
+        keywords: ['javascript', 'bower', 'dependency', 'management', 'manager', 'client-side', 'front-end']
       },
       nodejs: {
         name: 'Node.js',
-        url: 'http://nodejs.org/'
+        url: 'http://nodejs.org/',
+        keywords: ['javascript', 'node.js', 'server', 'back-end']
       },
       npm : {
         name: 'Node Package Manager',
-        url: 'https://www.npmjs.org/'
+        url: 'https://www.npmjs.org/',
+        keywords: ['javascript', 'dependency', 'management', 'manager', 'server-side', 'back-end']
       },
       express : {
         name : 'Express',
-        url: 'http://expressjs.com/'
+        url: 'http://expressjs.com/',
+        keywords: ['javascript', 'framework', 'node.js', 'server-side', 'back-end']
+      },
+      githubpages: {
+        name : 'GitHub Pages',
+        url: 'https://pages.github.com/',
+        keywords: ['javascript', 'server-side', 'back-end']
       }
     };
     var tech_bschang166 = [
-      techList.angular, techList.bootstrap, techList.githubAPI, techList.yeoman, techList.grunt, techList.bower
+      techList.angular, techList.bootstrap, techList.githubAPI, techList.yeoman, techList.grunt, techList.bower, techList.githubpages
     ];
     var tech_hackru_2014 = [
-      techList.socketio, techList.bootstrap, techList.bower, techList.nodejs, techList.express, techList.npm
+      techList.jquery, techList.socketio, techList.bootstrap, techList.bower, techList.nodejs, techList.express, techList.npm
     ];
     var tech_rumaps = [
-      techList.googleMap, techList.typeaheadjs, techList.bootstrap, techList.bower, techList.nodejs, techList.express, techList.npm
+      techList.googleMap, techList.jquery, techList.typeaheadjs, techList.bootstrap, techList.bower, techList.nodejs, techList.express, techList.npm
     ];
 
     en_us_dict.project = {
@@ -145,7 +168,9 @@ angular.module('hpApp')
       checkRepo: 'Check Repository',
       download: 'Download ZIP',
       infoHeader: 'Additional Project Information',
-      techHeader: 'Technology Stack'
+      techHeader: 'Technology Stack',
+      'front-end': 'Front-end',
+      'back-end' : 'Back-end'
     };
     zh_tw_dict.project = {
       'bschang166.github.io': {
@@ -170,7 +195,9 @@ angular.module('hpApp')
       checkRepo: '查看 Repository',
       download: '下載 ZIP',
       infoHeader: '更多情報',
-      techHeader: '所使用的技術'
+      techHeader: '所使用的技術',
+      'front-end': '前端',
+      'back-end' : '後端'
     };
     ja_jp_dict.project = {
       'bschang166.github.io': {
@@ -195,7 +222,9 @@ angular.module('hpApp')
       checkRepo: 'チェック Repository',
       download: 'ダウンロード ZIP',
       infoHeader: '追加情報',
-      techHeader: 'テクノロジー'
+      techHeader: 'テクノロジー',
+      'front-end': 'フロントエンド',
+      'back-end' : 'バックエンド'
     };
     // *** Footer ***
     en_us_dict.footer = {
