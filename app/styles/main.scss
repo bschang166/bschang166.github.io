@@ -3,6 +3,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+$container-max-width: 1020px;
+$headerInner-height: 50px;
+$headerInner-max-width: 984px;
+$header-nav-primary-max-width: $headerInner-max-width / 3;
+$header-nav-primary-tab-width: $header-nav-primary-max-width / 3 - 10px;
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -15,8 +22,57 @@ body {
   line-height: 1.6em;
 }
 
-.content {
-  padding-top: 50px;
+.headerInner {
+  position: relative;
+  background: none repeat scroll 0% 0% #272727;
+  max-width: $headerInner-max-width;
+  height: $headerInner-height;
+  margin: 0px auto;
+  /*max-width: 960px;
+  margin: auto auto;
+  padding: $header-height / 5 15px;
+  height: 100%;*/
+}
+
+.nav-primary {
+  float: right;
+  text-align: center;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  max-width: $header-nav-primary-max-width;
+
+  li {
+    display: inline;
+    height: $headerInner-height;
+    line-height: $headerInner-height;
+    float: left;
+    margin: 10px 5px 0px 5px;
+
+    a{
+      display:block;
+      width: $header-nav-primary-tab-width;
+      color: white;
+      font-size: 16px;
+      font-weight: bolder;
+      text-decoration: none;
+
+    }
+  }
+  li.active {
+    background-color: white;
+
+    a {
+      color:black;
+    }
+  }
+  li:hover {
+    background-color: #e3e3e3;
+
+    a {
+      color:black;
+    }
+  }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -29,9 +85,22 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  position: fixed;
+  width: 100%;
+  background: none repeat scroll 0% 0% #272727;
+  font-size: 13px;
   z-index: 9999;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  text-align: left;
+
+  /*position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  width: 100%;
+  height: $header-height;
+  background: none repeat scroll 0% 0% #333;*/
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -40,6 +109,14 @@ body {
     line-height: 40px;
     padding-bottom: 19px;
   }
+}
+
+.nav-primary {
+  float:right;
+}
+
+.content {
+  padding-top: $headerInner-height + 40px;
 }
 
 /* Custom page footer */
@@ -73,8 +150,6 @@ body {
   }
 }
 
-$container-max-width: 1020px;
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -97,21 +172,6 @@ $container-max-width: 1020px;
     border-bottom: 0;
   }
 }
-
-.container{
-  padding: 10px;
-  background: #ffffff;
-}
-
-/*.nav-main{
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  padding-left: auto;
-  padding-right: auto;
-  z-index: 9999;
-}*/
 
 /* For angularJS ui bootstrap compatibility */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
