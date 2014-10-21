@@ -36,101 +36,107 @@ angular.module('hpApp')
 
     // *** Main ***
     en_us_dict.main = {
-      about: 'About Me',
-      intro: 'Hello, my name is Benson and I am a programmer with an engineering background. ',
-      story_head: 'Let me tell you a bit about my story first:\n ',
-      story_content: 'I graduated from college with a bachelor degree in Biomedical Engineering, ' +
-        'and at the time I was considering whether or not to go to graduate school for Biomedical Engineering.' +
-        'It was during that time I decided to look into programming, which I was always interested in but never actively got into before then. ' +
-        'The initial learning was especially difficult since I was self-studying; it was somewhat comparable to learning a new (literal) language. ' +
-        'However once I got past the language syntax (I started with C#), I could start seeing the dots connecting. ' +
-        'From there I started reading books after books, learning not just new languages but how these languages all integrate together. ' +
-        'So here I am now, being able to understand and appreciate all the different programs and websites I used to take for granted everyday. ',
-      skill: 'My main area of focus currently is web development using Javascript, ' +
-        'along with libraries such as jQuery and frameworks such AngularJS for building front-end web applications. ' +
-        'I am also skilled in back-end development. My preferred server-side languages are Node.js and PHP, with databases MongoDB and MySQL respectively. ' +
-        'For Node.js, I use ExpressJS as my Node server framework. For PHP, I use XAMPP as my stack development environment in Windows. ',
-      url: 'views/main_en_us.html'
+      intro: 'views/main_en_us.html'
     };
     zh_tw_dict.main = {
-      url: 'views/main_zh_tw.html'
+      intro: 'views/main_zh_tw.html'
     };
     ja_jp_dict.main = {
-      url: 'views/main_ja_jp.html'
+      intro: 'views/main_ja_jp.html'
     };
 
     // *** Project ***
     var techList = {
+      javascript: {
+        name : 'JavaScript',
+        description: 'A dynamic programming language',
+        url : 'http://en.wikipedia.org/wiki/JavaScript',
+        keywords: ['JavaScript', 'language']
+      },
       angular: {
         name : 'AngularJS',
+        description: 'An open-source web application MVC framework for JavaScript',
         url : 'https://angularjs.org/',
-        keywords: ['javascript', 'framework', 'angular', 'client-side', 'front-end', 'MVC']
+        keywords: ['JavaScript', 'framework', 'angular', 'client-side', 'front-end', 'MVC']
       },
       socketio : {
         name: 'Socket.IO',
+        description: 'A JavaScript library for real-time web application',
         url: 'http://socket.io/',
-        keywords: ['javascript', 'library', 'socket.IO', 'io',
+        keywords: ['JavaScript', 'library', 'socket.IO', 'io',
           'client-side', 'front-end', 'back-end', 'server-side', 'real-time', 'communication']
       },
       typeaheadjs: {
         name: 'Twitter Typeahead.js',
+        description: 'A JavaScript library for auto completion',
         url: 'https://twitter.github.io/typeahead.js/',
-        keywords: ['javascript', 'library', 'typeahead', 'typeaheadjs', 'autocomplete']
+        keywords: ['JavaScript', 'library', 'typeahead', 'typeaheadjs', 'autocomplete']
       },
       jquery: {
         name: 'jQuery',
+        description: 'A JavaScript library for client-side scripting',
         url: 'http://jquery.com/',
-        keywords: ['javascript', 'library', 'jquery', 'DOM', 'client-side', 'front-end']
+        keywords: ['JavaScript', 'library', 'jquery', 'DOM', 'client-side', 'front-end']
       },
       bootstrap: {
         name: 'Twitter Bootstrap',
+        description: 'A front-end framework for HTML and CSS designs with JavaScript extensions',
         url: 'http://getbootstrap.com/',
-        keywords: ['javascript', 'framework', 'bootstrap', 'client-side', 'front-end', 'CSS','HTML']
+        keywords: ['JavaScript', 'framework', 'bootstrap', 'client-side', 'front-end', 'CSS','HTML']
       },
       googleMap: {
         name: 'Google Map API',
+        description: 'An API for developing Google Map web applications',
         url: 'https://developers.google.com/maps/',
-        keywords: ['javascript', 'API', 'google', 'map', 'client-side', 'front-end']
+        keywords: ['JavaScript', 'API', 'google', 'map', 'client-side', 'front-end']
       },
       githubAPI: {
         name: 'GitHub API',
+        description: 'An API for accessing GitHub resources',
         url: 'https://developer.github.com/v3/',
-        keywords: ['javascript', 'API', 'github', 'client-side', 'front-end']
+        keywords: ['JavaScript', 'API', 'github', 'client-side', 'front-end']
       },
       yeoman : {
         name: 'Yeoman',
+        description: 'A scaffold generator of applications to speed up development',
         url: 'http://yeoman.io/',
-        keywords: ['javascript', 'yeoman', 'generator', 'scaffold', 'angular', 'client-side', 'front-end']
+        keywords: ['JavaScript', 'yeoman', 'generator', 'scaffold', 'angular', 'client-side', 'front-end']
       },
       grunt : {
         name: 'Grunt',
+        description: 'JavaScript task runner for automation',
         url: 'http://gruntjs.com/',
-        keywords: ['javascript', 'grunt', 'task', 'automatic', 'build', 'test', 'client-side', 'front-end']
+        keywords: ['JavaScript', 'grunt', 'task', 'automatic', 'build', 'test', 'client-side', 'front-end']
       },
       bower : {
         name: 'Bower',
+        description: 'A front-end package manager',
         url: 'http://bower.io/',
-        keywords: ['javascript', 'bower', 'dependency', 'management', 'manager', 'client-side', 'front-end']
-      },
-      nodejs: {
-        name: 'Node.js',
-        url: 'http://nodejs.org/',
-        keywords: ['javascript', 'node.js', 'server', 'back-end']
+        keywords: ['JavaScript', 'bower', 'dependency', 'management', 'manager', 'client-side', 'front-end']
       },
       npm : {
         name: 'Node Package Manager',
+        description: 'A package manager for Node.js',
         url: 'https://www.npmjs.org/',
-        keywords: ['javascript', 'dependency', 'management', 'manager', 'server-side', 'back-end']
+        keywords: ['JavaScript', 'dependency', 'management', 'manager', 'server-side', 'back-end']
+      },
+      nodejs: {
+        name: 'Node.js',
+        description: 'An open-source runtime environment for the server-side',
+        url: 'http://nodejs.org/',
+        keywords: ['JavaScript', 'node.js', 'server', 'back-end']
       },
       express : {
         name : 'Express',
+        description: 'A framework for Node.js',
         url: 'http://expressjs.com/',
-        keywords: ['javascript', 'framework', 'node.js', 'server-side', 'back-end']
+        keywords: ['JavaScript', 'framework', 'node.js', 'server-side', 'back-end']
       },
       githubpages: {
         name : 'GitHub Pages',
+        description: 'Host for webpages through GitHub',
         url: 'https://pages.github.com/',
-        keywords: ['javascript', 'server-side', 'back-end']
+        keywords: ['JavaScript', 'server-side', 'back-end']
       }
     };
     var tech_bschang166 = [
@@ -227,29 +233,22 @@ angular.module('hpApp')
       'back-end' : 'バックエンド'
     };
     // *** Footer ***
+    var languageName = {
+      en_us: 'English',
+      zh_tw: '中文(繁體)',
+      ja_jp: '日本語'
+    };
     en_us_dict.footer = {
       choose_language: 'Language ',
-      language_name : {
-        en_us: 'English',
-        zh_tw: 'Traditional Chinese',
-        ja_jp: 'Japanese'
-      }
+      language_name : languageName
     };
     zh_tw_dict.footer = {
       choose_language: '語言 ',
-      language_name : {
-        en_us: '英文',
-        zh_tw: '繁體中文',
-        ja_jp: '日文'
-      }
+      language_name : languageName
     };
     ja_jp_dict.footer = {
       choose_language: '言語 ',
-      language_name : {
-        en_us: '英語',
-        zh_tw: '繁體中文',
-        ja_jp: '日本語'
-      }
+      language_name : languageName
     };
 
     // ------------ End Dictionary Definitions ---------------

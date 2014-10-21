@@ -8,7 +8,7 @@
  * Service in the hpApp.
  */
 angular.module('hpApp')
-  .service('githubRepoService', function githubRepoService($http, $timeout, $log) {
+  .service('githubRepoService', function githubRepoService($rootScope, $http, $timeout, $log) {
 
     var repos;
 
@@ -18,14 +18,18 @@ angular.module('hpApp')
           $log.debug('Success with status: '+status);
           $log.debug(results.data);
           repos = results.data;
+          broadcastReposData();
         })
         .error(function(data,status){
           $log.debug('Error with status: '+status);
-          repos = ['There appears to be an error, please try again!'];
+          //repos = ['There appears to be an error, please try again!'];
         });
     };
     _initializeReposData();
 
+    var broadcastReposData = function(){
+      $rootScope.$broadcast('githubRepoService.ready', repos)
+    };
 
     var getRepos = function(callback){
       // check if repos data has been retrieved

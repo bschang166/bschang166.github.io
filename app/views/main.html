@@ -1,6 +1,23 @@
 
-<div ng-include="lookupTerm('url')"></div>
+<div ng-include="lookupTerm('intro')"></div>
 
+<div class="techs">
+
+  <h2>My Skills</h2>
+  <pre>Find skills by category: {{selected | json}}</pre>
+  <input type="text" ng-model="selected" typeahead="keyword as keyword for keyword in techKeywords | filter:$viewValue | capitalize | limitTo:6"
+         class="form-control">
+
+  <h5 ng-show="languageFiltered">Programming Language</h5>
+  <a ng-repeat="language in languageFiltered = (techList | filter: selected | filter: {keywords: 'language'})">
+    {{language.name}}
+  </a>
+  <h5 ng-show="frameworkFiltered">Frameworks</h5>
+  <a ng-repeat="language in frameworkFiltered = (techList | filter: selected | filter: {keywords: 'framework'})">
+    {{language.name}}
+  </a>
+
+</div>
 
 <!--
 <section id="about-me">
