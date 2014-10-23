@@ -17,23 +17,35 @@ $header-nav-primary-tab-width: $header-nav-primary-max-width / 3 - 10px;
   padding: 0.2em 0;
 }
 
+/* For angularJS ui bootstrap compatibility */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 /* Space out content a bit */
 body {
   line-height: 1.6em;
 }
 
+// Header -------------------------------------------------
+/* Custom page header */
+.header {
+  width: 100%;
+  background: none repeat scroll 0% 0% #272727;
+  font-size: 13px;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  text-align: left;
+}
+// Inner Header Wrap
 .headerInner {
   position: relative;
   background: none repeat scroll 0% 0% #272727;
   max-width: $headerInner-max-width;
   height: $headerInner-height;
   margin: 0px auto;
-  /*max-width: 960px;
-  margin: auto auto;
-  padding: $header-height / 5 15px;
-  height: 100%;*/
 }
-
+// Header Navigation
 .nav-primary {
   float: right;
   text-align: center;
@@ -48,7 +60,6 @@ body {
     line-height: $headerInner-height;
     float: left;
     margin: 10px 5px 0px 5px;
-
     a{
       display:block;
       width: $header-nav-primary-tab-width;
@@ -56,69 +67,30 @@ body {
       font-size: 16px;
       font-weight: bolder;
       text-decoration: none;
-
+      outline: 0px;
     }
   }
   li.active {
     background-color: white;
-
     a {
       color:black;
     }
   }
   li:hover {
     background-color: #e3e3e3;
-
     a {
       color:black;
     }
   }
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  width: 100%;
-  background: none repeat scroll 0% 0% #272727;
-  font-size: 13px;
-  z-index: 9999;
-  top: 0px;
-  left: 0px;
-  position: fixed;
-  text-align: left;
-
-  /*position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 9999;
-  width: 100%;
-  height: $header-height;
-  background: none repeat scroll 0% 0% #333;*/
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-.nav-primary {
-  float:right;
-}
-
+// Content -------------------------------------------------
 .content {
   padding-top: $headerInner-height + 40px;
 }
 
+
+// Footer -------------------------------------------------
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -126,59 +98,67 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
     max-width: $container-max-width
   }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
 }
 
-/* For angularJS ui bootstrap compatibility */
-.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 #intro {
 
 }
+
+.tech-container {
+  .tech-header{
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline;
+
+    a {
+      display: inline-block;
+      font-weight: 700;
+      margin: 0px 5px 10px 0px;
+    }
+  }
+}
+
+/*.tech-container {
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline;
+    margin-right: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #D9534F;
+    cursor: pointer;
+    a {
+      display: inline-block;
+      width: auto;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+      outline: 0px;
+    }
+  }
+  li:hover {
+    background-color: #ca3e36;
+  }
+}*/
 
 .carousel-indicators {
   background: rgb(237, 213, 209); /* Fall-back for browsers that don't
@@ -197,18 +177,4 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-}
-
-.text-collapse{
-  line-height: 20px;
-  max-height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-  transition: max-height 1.2s ease-in-out;
-
-}
-.text-show {
-  overflow: visible;
-  max-height: 1000px;
 }
