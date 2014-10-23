@@ -50,7 +50,7 @@ angular.module('hpApp')
     $scope.myInterval = 5000;
 
     var slideCount = 0;
-    var repoKey = repoInfo.name;
+    var repoKey = repoInfo.id;
 
     var initializeSlides = function(){
       var slide = nextSlide();
@@ -58,7 +58,7 @@ angular.module('hpApp')
     };
     var nextSlide = function(){
       slideCount++;
-      var imageSrc = 'images/'+repoKey+slideCount+'.PNG';
+      var imageSrc = 'images/'+repoKey+'_'+slideCount+'.PNG';
       return {
         src: imageSrc
       };

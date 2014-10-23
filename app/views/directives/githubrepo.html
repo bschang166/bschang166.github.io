@@ -1,13 +1,13 @@
 <div class="thumbnail">
 
-  <img ng-src="{{'images/' + repoInfo.name + '1.png'}}" style="cursor: zoom-in"
+  <img ng-src="{{'images/' + repoInfo.id + '_1.PNG'}}" style="cursor: zoom-in"
        ng-click="open(repoInfo, 'lg')" alt="No preview" />
 
   <div class="caption" style="overflow: hidden">
     <h3><a ng-href="{{repoInfo.html_url}}" target="_blank">{{repoInfo.name}}</a></h3>
     <p>{{repoInfo.description || 'No Description'}}</p>
     <div>
-      <a ng-href="{{repoInfo.html_url}}"  class="btn btn-primary" role="button">{{lookupRepoTerm('checkRepo')}}</a>
+      <a ng-href="{{repoInfo.html_url}}"  target="_blank" class="btn btn-primary" role="button">{{lookupRepoTerm('checkRepo')}}</a>
       <a ng-href="{{repoInfo.html_url+'/archive/master.zip'}}"  class="btn btn-info" role="button">{{lookupRepoTerm('download')}}</a>
     </div>
 
@@ -17,19 +17,19 @@
       <accordion-group heading="{{lookupRepoTerm('techHeader')}}">
         <h4>{{lookupRepoTerm('front-end')}}</h4>
             <div class="list-group">
-              <a ng-repeat="tech in lookupRepoTerm(repoInfo.name).tech | filter: {keywords: 'front-end'}"
+              <a ng-repeat="tech in lookupRepoTerm(repoInfo.id).tech | filter: {keywords: 'front-end'}"
                  ng-href="{{tech.url}}" target="blank" class="list-group-item">{{tech.name}}</a>
             </div>
 
         <h4>{{lookupRepoTerm('back-end')}}</h4>
             <div class="list-group">
-              <a ng-repeat="tech in lookupRepoTerm(repoInfo.name).tech | filter: {keywords: 'back-end'}"
+              <a ng-repeat="tech in lookupRepoTerm(repoInfo.id).tech | filter: {keywords: 'back-end'}"
                  ng-href="{{tech.url}}" target="blank" class="list-group-item">{{tech.name}}</a>
             </div>
       </accordion-group>
 
       <accordion-group heading="{{lookupRepoTerm('infoHeader')}}">
-        <div ng-bind-html="lookupRepoTerm(repoInfo.name).info| nl2br"></div>
+        <div ng-bind-html="lookupRepoTerm(repoInfo.id).info| nl2br"></div>
       </accordion-group>
     </accordion>
 
