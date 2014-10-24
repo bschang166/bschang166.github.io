@@ -158,6 +158,13 @@ angular.module('hpApp')
         description: 'An API for accessing GitHub resources',
         url: 'https://developer.github.com/v3/',
         keywords: ['javascript', 'api', 'github', 'client-side', 'front-end']
+      },
+
+      parse : {
+        name: 'Parse (Core)',
+        description: 'RESTful Web service that acts as the back-end.',
+        url: 'https://parse.com/',
+        keywords: ['back-end', 'server-side']
       }
     };
 

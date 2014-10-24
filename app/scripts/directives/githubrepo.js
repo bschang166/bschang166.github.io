@@ -42,14 +42,37 @@ angular.module('hpApp')
       }
     };
   })
-  .controller('ThumbnailModalCtrl', function($scope, $modalInstance,$log, utilityService, repoInfo){
+  .controller('ThumbnailModalCtrl', function($scope, $modalInstance,$log, utilityService, languageService, repoInfo){
 
     $scope.repoInfo = repoInfo;
     $scope.slides = [];
 
     $scope.myInterval = 5000;
 
-    var slideCount = 0;
+    var repoKey = repoInfo.id;
+
+    var initializeSlides = function(){
+      var projectInfo = languageService.lookupTerm('project', repoKey);
+      var images = projectInfo.image || [];
+
+      images.forEach(function(image, index){
+        var imageSrc = 'images/'+repoKey+'_'+index+'.PNG';
+        var imageText= image;
+        var slide = {
+          text: imageText,
+          image: imageSrc
+        };
+        addSlide(slide);
+      });
+    };
+
+    var addSlide = function(slide){
+        $scope.slides.push(slide);
+    };
+
+    initializeSlides();
+
+   /* var slideCount = 0;
     var repoKey = repoInfo.id;
 
     var initializeSlides = function(){
@@ -77,5 +100,5 @@ angular.module('hpApp')
         });
     };
 
-    initializeSlides();
+    initializeSlides();*/
   });

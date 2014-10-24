@@ -159,11 +159,23 @@ body {
     background-color: #ca3e36;
   }
 }*/
-
+.carousel-caption {
+  color: #000;
+  font-size: 20px;
+  text-shadow:
+  -1px -1px 0 #fff,
+  1px -1px 0 #fff,
+  -1px 1px 0 #fff,
+  1px 1px 0 #fff;
+}
 .carousel-indicators {
-  background: rgb(237, 213, 209); /* Fall-back for browsers that don't
-                                    support rgba */
-  background: rgba(109, 123, 237, 0.20);
+  li{
+    background: rgb(21, 21, 21);
+  }
+
+  .active{
+    background-color: rgba(248, 127, 43, 0.91);
+  }
 }
 
 .github-repo-modal {

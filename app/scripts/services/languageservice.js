@@ -53,13 +53,19 @@ angular.module('hpApp')
     // *** Project ***
 
     var tech_bschang166 = [
-      techList.angular, techList.bootstrap, techList.githubAPI, techList.yeoman, techList.grunt, techList.bower, techList.githubpages
+      techList.angular, techList.bootstrap, techList.githubAPI, techList.yeoman, techList.grunt, techList.bower, techList.npm, techList.githubpages
     ];
     var tech_hackru_2014 = [
       techList.jquery, techList.socketio, techList.bootstrap, techList.bower, techList.nodejs, techList.express, techList.npm
     ];
     var tech_rumaps = [
       techList.googleMap, techList.jquery, techList.typeaheadjs, techList.bootstrap, techList.bower, techList.nodejs, techList.express, techList.npm
+    ];
+    var tech_eStore = [
+      techList.angular, techList.jquery, techList.bootstrap, techList.bower, techList.parse, techList.npm
+    ];
+    var tech_multimedia = [
+      techList.angular, techList.jquery, techList.bootstrap, techList.bower, techList.nodejs, techList.npm
     ];
 
     /*
@@ -77,9 +83,9 @@ angular.module('hpApp')
           'Yeoman is used for generating AngularJS scaffold, Grunt for automatic tasks execution, and Bower for dependencies management.\n\n' +
           'It uses the Github REST API to access and load my repositories.\n\n',
         tech : tech_bschang166,
-        image: {
-
-        }
+        image: [
+          'Home', 'Project'
+        ]
       },
 
       25315226: {
@@ -89,12 +95,41 @@ angular.module('hpApp')
           'with the server processing the interactions and responding dynamically to everyone involved.\n\n' +
           'The basic architecture and construction for inter-communication between serer and clients are done, ' +
           'along with a very basic game system.',
-        tech : tech_hackru_2014
+        tech : tech_hackru_2014,
+        image: [
+          'Initial screen', 'Player is logged in', 'Signals for player action', 'Player score increases'
+        ]
       },
 
       25315292: {
         info: 'The aim of this project is to improve the online campus maps of Rutgers University.',
-        tech : tech_rumaps
+        tech : tech_rumaps,
+        image: [
+          'Overview of map interface', 'Typeahead allows user to find a location on and off campus or both',
+          'Quick search is also available for fast look up of similarly categorized places'
+        ]
+      },
+
+      25652256: {
+        info: 'The fundamentals of E-Commerce are implemented with AngularJS on the front-end, ' +
+          'and Parse.com used on the server-side for RESTful service. \n\n' +
+          'Users are able to add items to cart, edit cart, and place order using validated form.\n\n' +
+          'Admins are able to login in to admin interface to add, edit, remove item from catalog through REST service using angular resource module, ' +
+          'as well as examine customer orders and modify legitimately if necessary.',
+        tech : tech_eStore,
+        image: [
+          'Overview of the UI', 'Customers can edit their cart contents here', 'Customers enter shipping information, which is validated initially here on client-side',
+        'Customer gets a reference number for their orders', 'Login page', 'Admin interface for editing products', 'Admin can also check orders']
+      },
+
+      25647055 : {
+        info: 'A media searcher that allows users to find their favorite media.\n\n' +
+          'AngularJS is used to manager data and for more flexible data formats and customizable views.',
+        tech : tech_multimedia,
+        image: [
+          'Displays the top album ranking, parsed from RSS feed', 'Top song rankings', 'Search results are shown here',
+          'A quick preview with information and link to the official page'
+        ]
       },
       checkRepo: 'Check Repository',
       download: 'Download ZIP',
@@ -122,6 +157,28 @@ angular.module('hpApp')
       25315292: {
         info: '這個項目的目標是改進Rutgers University的線上地圖.',
         tech : tech_rumaps
+      },
+
+      25652256: {
+        info: 'The fundamentals of E-Commerce are implemented with AngularJS on the front-end, ' +
+          'and Parse.com used on the server-side for RESTful service. \n\n' +
+          'Users are able to add items to cart, edit cart, and place order using validated form.\n\n' +
+          'Admins are able to login in to admin interface to add, edit, remove item from catalog through REST service using angular resource module, ' +
+          'as well as examine customer orders and modify legitimately if necessary.',
+        tech : tech_eStore,
+        image: [
+          'Overview of the UI', 'Customers can edit their cart contents here', 'Customers enter shipping information, which is validated initially here on client-side',
+          'Customer gets a reference number for their orders', 'Login page', 'Admin interface for editing products', 'Admin can also check orders']
+      },
+
+      25647055 : {
+        info  : 'A media searcher that allows users to find their favorite media.\n\n' +
+          'AngularJS is used to manager data and for more flexible data formats and customizable views.',
+        tech  : tech_multimedia,
+        image: [
+          'Displays the top album ranking, parsed from RSS feed', 'Top song rankings', 'Search results are shown here',
+          'A quick preview with information and link to the official page'
+        ]
       },
       checkRepo: '查看 Repository',
       download: '下載 ZIP',
