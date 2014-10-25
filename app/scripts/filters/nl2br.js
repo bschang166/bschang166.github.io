@@ -11,6 +11,10 @@
 angular.module('hpApp')
   .filter('nl2br', function () {
     return function (input) {
-      return input.replace(/\n\r?/g, '<br/>');
+      if (angular.isString(input)){
+        return input.replace(/\n\r?/g, '<br/>');
+      } else {
+        return '';
+      }
     };
   });

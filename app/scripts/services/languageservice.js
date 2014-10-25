@@ -97,7 +97,7 @@ angular.module('hpApp')
           'along with a very basic game system.',
         tech : tech_hackru_2014,
         image: [
-          'Initial screen', 'Player is logged in', 'Signals for player action', 'Player score increases'
+          'Overall view', 'Signaling for player action to earn score', 'New incoming users are added and scores shown in real-time'
         ]
       },
 
@@ -105,7 +105,7 @@ angular.module('hpApp')
         info: 'The aim of this project is to improve the online campus maps of Rutgers University.',
         tech : tech_rumaps,
         image: [
-          'Overview of map interface', 'Typeahead allows user to find a location on and off campus or both',
+          'Overview of map interface', 'Typeahead for searching on-campus', 'The campus location searched is marked on map',
           'Quick search is also available for fast look up of similarly categorized places'
         ]
       },
@@ -263,7 +263,7 @@ angular.module('hpApp')
 
     return {
       getLanguages: function () {
-        return languages;
+        return languages || [];
       },
       getCurrentLanguageInfo: function(){
         return currentLanguage;
@@ -276,11 +276,11 @@ angular.module('hpApp')
       },
       lookupPage: function(page){
         var dict = currentLanguage.dict;
-        return dict[page];
+        return dict[page] || '';
       },
       lookupTerm : function ( page, lookup ) {
         var dict = currentLanguage.dict;
-        return dict[page][lookup];
+        return dict[page][lookup] || '';
       }
     };
   });

@@ -8,11 +8,13 @@
  * Controller of the hpApp
  */
 angular.module('hpApp')
-  .controller('ProjectCtrl', function ($scope, $timeout, $log, languageService, githubRepoService) {
-    $scope.repos = [];
+  .controller('ProjectCtrl', function ($scope, $timeout, $log, $filter, languageService, githubRepoService) {
+
+    var reposCountPerRow = 3;
+    $scope.reposGroups = [];
 
     githubRepoService.getRepos(function(reposData){
-      $scope.repos = reposData;
+      $scope.reposGroups = $filter('groupBy')(reposData, reposCountPerRow);
     });
 
     $scope.lookupRepoTerm = function(repo){

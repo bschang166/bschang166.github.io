@@ -1,9 +1,9 @@
-<div class="row">
-  <div class="col-sm-6 col-md-4" ng-repeat="repo in repos">
-    <github-repo repo-info="repo">
-      <div ng-bind-html="lookupRepoTerm(repo) | nl2br"></div>
-    </github-repo>
+<div ng-repeat="reposGroup in reposGroups">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 clearfix" ng-repeat="repo in reposGroup">
+      <github-repo repo-info="repo">
+        <div ng-bind-html="lookupRepoTerm(repo) | nl2br"></div>
+      </github-repo>
+    </div>
   </div>
 </div>
-
-

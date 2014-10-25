@@ -14,27 +14,30 @@
     <hr/>
 
     <accordion>
-      <accordion-group heading="{{lookupRepoTerm('techHeader')}}">
-        <h4>{{lookupRepoTerm('front-end')}}</h4>
-            <div class="list-group">
-              <a ng-repeat="tech in lookupRepoTerm(repoInfo.id).tech | filter: {keywords: 'front-end'}"
-                 ng-href="{{tech.url}}" target="blank" class="list-group-item">{{tech.name}}</a>
-            </div>
+      <div ng-show="repoTech">
+        <accordion-group heading="{{lookupRepoTerm('techHeader')}}">
+          <h4>{{lookupRepoTerm('front-end')}}</h4>
+          <div class="list-group">
+            <a ng-repeat="tech in repoTech | filter: {keywords: 'front-end'}"
+               ng-href="{{tech.url}}" target="blank" class="list-group-item">{{tech.name}}</a>
+          </div>
 
-        <h4>{{lookupRepoTerm('back-end')}}</h4>
-            <div class="list-group">
-              <a ng-repeat="tech in lookupRepoTerm(repoInfo.id).tech | filter: {keywords: 'back-end'}"
-                 ng-href="{{tech.url}}" target="blank" class="list-group-item">{{tech.name}}</a>
-            </div>
-      </accordion-group>
+          <h4>{{lookupRepoTerm('back-end')}}</h4>
+          <div class="list-group">
+            <a ng-repeat="tech in repoTech | filter: {keywords: 'back-end'}"
+               ng-href="{{tech.url}}" target="blank" class="list-group-item">{{tech.name}}</a>
+          </div>
+        </accordion-group>
+      </div>
 
-      <accordion-group heading="{{lookupRepoTerm('infoHeader')}}">
-        <div ng-bind-html="lookupRepoTerm(repoInfo.id).info| nl2br"></div>
-      </accordion-group>
+      <div ng-show="repoMoreInfo">
+        <accordion-group heading="{{lookupRepoTerm('infoHeader')}}">
+          <div ng-bind-html="repoMoreInfo | nl2br"></div>
+        </accordion-group>
+      </div>
     </accordion>
 
 
-    <!--<div class="well text-collapse" ng-class="{'text-show': show}" ng-click="toggleText()" ng-transclude ></div>-->
   </div>
 
 </div>

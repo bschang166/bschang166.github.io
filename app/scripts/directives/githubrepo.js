@@ -39,6 +39,9 @@ angular.module('hpApp')
             }
           });
         };
+
+        scope.repoTech = scope.lookupRepoTerm(scope.repoInfo.id).tech;
+        scope.repoMoreInfo = scope.lookupRepoTerm(scope.repoInfo.id).info;
       }
     };
   })
