@@ -12,7 +12,12 @@ angular.module('hpApp')
     $scope.lookupTerm = function(term){
         return languageService.lookupTerm('main', term);
     };
+  })
+  .controller('TechCtrl', function($scope, $log, languageService, techService){
 
+    $scope.lookupTerm = function(term){
+      return languageService.lookupTerm('main', term);
+    };
     $scope.selected = '';
 
     var techMap = techService.getTechList();

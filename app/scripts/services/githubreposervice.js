@@ -8,20 +8,23 @@
  * Service in the hpApp.
  */
 angular.module('hpApp')
-  .service('githubRepoService', function githubRepoService($rootScope, $http, $timeout, $log) {
+  .service('githubRepoService', function githubRepoService($rootScope, $http, $timeout, $log, githubUsername) {
 
     var repos;
 
     var _initializeReposData = function(){
-      $http.jsonp('https://api.github.com/users/bschang166/repos' + '?callback=JSON_CALLBACK')
+      $http.jsonp('https://api.github.com/users/'+githubUsername+'/repos' + '?callback=JSON_CALLBACK')
         .success(function(results,status){
           $log.debug('Success with status: '+status);
           $log.debug(results.data);
-          repos = results.data;
+          repos = {};
+          repos.data = results.data || [];
           broadcastReposData();
         })
         .error(function(data,status){
           $log.debug('Error with status: '+status);
+          repos = {};
+          repos.error = 'Error with status: '+status;
           //repos = ['There appears to be an error, please try again!'];
         });
     };

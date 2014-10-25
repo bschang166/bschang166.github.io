@@ -1,4 +1,21 @@
-<div ng-repeat="reposGroup in reposGroups">
+<div ng-hide="reposGroups" class="text-center temp-container vertical-center">
+  <span class="glyphicon glyphicon-refresh glyph-large spin "></span>
+</div>
+
+<div ng-if="reposGroups.data">
+  <alert type="success">
+    Here are some of the projects that I have worked on. You can find all of the projects listed here on my
+    <a ng-href="{{'https://github.com/'+githubUsername+'?tab=repositories'}}" target="_blank">GitHub</a> !
+  </alert>
+</div>
+<div ng-if="reposGroups.error">
+  <alert type="danger">
+    Sorry, there is an error. Please try again or instead visit my
+    <a ng-href="{{'https://github.com/'+githubUsername+'?tab=repositories'}}" target="_blank">GitHub</a>.
+  </alert>
+</div>
+
+<div ng-repeat="reposGroup in reposGroups.data">
   <div class="row">
     <div class="col-sm-6 col-md-4 clearfix" ng-repeat="repo in reposGroup">
       <github-repo repo-info="repo">

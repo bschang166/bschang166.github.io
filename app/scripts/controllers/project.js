@@ -8,14 +8,24 @@
  * Controller of the hpApp
  */
 angular.module('hpApp')
-  .controller('ProjectCtrl', function ($scope, $timeout, $log, $filter, languageService, githubRepoService) {
+  .controller('ProjectCtrl', function ($scope, $timeout, $log, $filter, languageService, githubRepoService, githubUsername) {
 
     var reposCountPerRow = 3;
-    $scope.reposGroups = [];
+    $scope.githubUsername = githubUsername;
+    $scope.reposGroups;
 
-    githubRepoService.getRepos(function(reposData){
-      $scope.reposGroups = $filter('groupBy')(reposData, reposCountPerRow);
-    });
+    $scope.getRepos = function(){
+      githubRepoService.getRepos(function(reposData){
+        $scope.reposGroups = {};
+        if (reposData.data){
+          $scope.reposGroups.data = $filter('groupBy')(reposData.data, reposCountPerRow);
+        }
+        if (reposData.error){
+          $scope.reposGroups.error = reposData.error;
+        }
+      });
+    };
+    $scope.getRepos();
 
     $scope.lookupRepoTerm = function(repo){
       return languageService.lookupTerm('project', repo.name);

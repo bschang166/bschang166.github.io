@@ -1,7 +1,8 @@
 
 <div ng-include="lookupTerm('intro')"></div>
-    
-<div class="techs">
+
+<div ng-controller="TechCtrl" ng-include="lookupTerm('tech')"></div>
+<!--<div class="techs">
 
   <h2>My Skills</h2>
   <pre>Find skills by category: {{selected | json}}</pre>
@@ -22,7 +23,5 @@
 
   <tech-container tech-heading="Tools" tech-data="techList" search="selected" tech-filter="{keywords: 'tool'}">
   </tech-container>
-
-
-</div>
+</div>-->
 

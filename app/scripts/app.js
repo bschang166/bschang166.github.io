@@ -18,6 +18,7 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
+  .constant('githubUsername', 'bschang166')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/home', {

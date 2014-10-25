@@ -1,6 +1,6 @@
 <div class="thumbnail">
 
-  <img ng-src="{{'images/' + repoInfo.id + '_1.PNG'}}" style="cursor: zoom-in"
+  <img ng-src="{{'images/' + repoInfo.id + '_0.PNG'}}" style="cursor: zoom-in"
        ng-click="open(repoInfo, 'lg')" alt="No preview" />
 
   <div class="caption" style="overflow: hidden">
@@ -14,25 +14,25 @@
     <hr/>
 
     <accordion>
-      <div ng-show="repoTech">
+      <div ng-show="lookupRepoTerm(repoInfo.id).tech">
         <accordion-group heading="{{lookupRepoTerm('techHeader')}}">
           <h4>{{lookupRepoTerm('front-end')}}</h4>
           <div class="list-group">
-            <a ng-repeat="tech in repoTech | filter: {keywords: 'front-end'}"
+            <a ng-repeat="tech in lookupRepoTerm(repoInfo.id).tech | filter: {keywords: 'front-end'}"
                ng-href="{{tech.url}}" target="blank" class="list-group-item">{{tech.name}}</a>
           </div>
 
           <h4>{{lookupRepoTerm('back-end')}}</h4>
           <div class="list-group">
-            <a ng-repeat="tech in repoTech | filter: {keywords: 'back-end'}"
+            <a ng-repeat="tech in lookupRepoTerm(repoInfo.id).tech | filter: {keywords: 'back-end'}"
                ng-href="{{tech.url}}" target="blank" class="list-group-item">{{tech.name}}</a>
           </div>
         </accordion-group>
       </div>
 
-      <div ng-show="repoMoreInfo">
+      <div ng-show="lookupRepoTerm(repoInfo.id).info">
         <accordion-group heading="{{lookupRepoTerm('infoHeader')}}">
-          <div ng-bind-html="repoMoreInfo | nl2br"></div>
+          <div ng-bind-html="lookupRepoTerm(repoInfo.id).info | nl2br"></div>
         </accordion-group>
       </div>
     </accordion>
