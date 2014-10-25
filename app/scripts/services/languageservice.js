@@ -39,15 +39,30 @@ angular.module('hpApp')
     // *** Main ***
     en_us_dict.main = {
       intro: 'views/main_en_us.html',
-      tech : 'views/tech_en_us.html'
+      tech : 'views/tech_en_us.html',
+      programLanguage : 'Programming Languages',
+      framework : 'Frameworks',
+      library : 'Libraries',
+      database : 'Databases',
+      tool : 'Tools'
     };
     zh_tw_dict.main = {
       intro: 'views/main_zh_tw.html',
-      tech : 'views/tech_zh_tw.html'
+      tech : 'views/tech_zh_tw.html',
+      programLanguage : '程序語言',
+      framework : '程序框架',
+      library : '程序庫',
+      database : '數據庫',
+      tool : '工具'
     };
     ja_jp_dict.main = {
       intro: 'views/main_ja_jp.html',
-      tech : 'views/tech_ja_jp.html'
+      tech : 'views/tech_ja_jp.html',
+      programLanguage : 'プログラミング言語',
+      framework : 'フレームワーク',
+      library : 'ライブラリ',
+      database : 'データベース',
+      tool : 'ツール'
     };
 
     // *** Project ***

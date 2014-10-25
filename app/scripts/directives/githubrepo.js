@@ -7,7 +7,7 @@
  * # githubRepo
  */
 angular.module('hpApp')
-  .directive('githubRepo', function ($modal, languageService) {
+  .directive('githubRepo', function ($modal, languageService, utilityService) {
     return {
       templateUrl: 'views/directives/githubrepo.html',
       restrict: 'E',
@@ -17,6 +17,16 @@ angular.module('hpApp')
       },
       link: function(scope, elm, attrs){
         scope.show = false;
+
+        scope.previewUrl = 'images/' + scope.repoInfo.id + '_0.PNG';
+        scope.previewAvailable = false;
+        utilityService.isImage(scope.previewUrl)
+          .then(
+          // success
+          function(){
+            scope.previewAvailable = true;
+          }
+        );
 
         scope.lookupRepoTerm = function(term){
           return languageService.lookupTerm('project',term) || '';

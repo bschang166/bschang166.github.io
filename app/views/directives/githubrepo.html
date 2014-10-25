@@ -1,7 +1,8 @@
 <div class="thumbnail">
 
-  <img ng-src="{{'images/' + repoInfo.id + '_0.PNG'}}" style="cursor: zoom-in"
+  <img ng-src="{{previewUrl}}" style="cursor: zoom-in" ng-show="previewAvailable"
        ng-click="open(repoInfo, 'lg')" alt="No preview" />
+
 
   <div class="caption" style="overflow: hidden">
     <h3><a ng-href="{{repoInfo.html_url}}" target="_blank">{{repoInfo.name}}</a></h3>
