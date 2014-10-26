@@ -8,10 +8,10 @@
  * Controller of the hpApp
  */
 angular.module('hpApp')
-  .controller('ContactCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ContactCtrl', function ($scope, email, languageService) {
+    $scope.email = email;
+
+    $scope.lookupTerm = function(term){
+      return languageService.lookupTerm('contact', term);
+    };
   });

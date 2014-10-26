@@ -98,6 +98,7 @@ body {
   padding-bottom: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  margin-top: 20px;
 }
 
 
@@ -114,7 +115,7 @@ body {
 
 
 #intro {
-  line-height: 2em;
+  line-height: 1.6em;
 }
 
 .tech-container {
@@ -230,5 +231,22 @@ body {
     height: 50%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.contacts {
+  font-size: 24px;
+
+  li {
+    display: inline;
+    float: left;
+    margin: 10px 5px 0px 5px;
+    a {
+      display: block;
+      font-size: 16px;
+      font-weight: bolder;
+      text-decoration: none;
+      outline: 0px;
+    }
   }
 }

@@ -30,4 +30,7 @@ angular.module('hpApp')
     $scope.lookupRepoTerm = function(repo){
       return languageService.lookupTerm('project', repo.name);
     };
+    $scope.lookupTerm = function(term){
+      return languageService.lookupTerm('project', term);
+    };
   });

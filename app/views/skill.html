@@ -1,7 +1,7 @@
 <div ng-controller="TechCtrl" >
-  <h2>{{lookupTerm('skill')}}</h2>
+  <h2>{{lookupTerm('skillHeader')}}</h2>
   <alert type="info">
-    Looking for a specific set of skills? Try the search bar below for a quick match!
+    {{lookupTerm('skillInfo')}}
   </alert>
   <div class="input-group" style="margin-bottom: 10px;">
     <span class="input-group-addon glyphicon glyphicon-search"></span>

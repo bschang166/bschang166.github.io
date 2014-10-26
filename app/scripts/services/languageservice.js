@@ -39,7 +39,8 @@ angular.module('hpApp')
     // *** Main ***
     en_us_dict.main = {
       intro: 'views/main_en_us.html',
-      skill: 'My Skills',
+      skillHeader: 'My Skills',
+      skillInfo: 'Looking for a specific set of skills? Try the search bar below for a quick match!',
       programLanguage : 'Programming Languages',
       framework : 'Frameworks',
       library : 'Libraries',
@@ -48,7 +49,8 @@ angular.module('hpApp')
     };
     zh_tw_dict.main = {
       intro: 'views/main_zh_tw.html',
-      skill: '專業技術',
+      skillHeader: '專業技術',
+      skillInfo: '請用下面的功能來搜尋您所需要的技術.',
       programLanguage : '程序語言',
       framework : '程序框架',
       library : '程序庫',
@@ -57,7 +59,8 @@ angular.module('hpApp')
     };
     ja_jp_dict.main = {
       intro: 'views/main_ja_jp.html',
-      skill: '専門技術',
+      skillHeader: '専門技術',
+      skillInfo : '特定のスキルが欲しい？　下の検索機能を試してみてください！',
       programLanguage : 'プログラミング言語',
       framework : 'フレームワーク',
       library : 'ライブラリ',
@@ -146,6 +149,8 @@ angular.module('hpApp')
           'A quick preview with information and link to the official page'
         ]
       },
+
+      pageInfo: 'Here are some of the projects that I have worked on. You can find all of the projects listed here on my',
       checkRepo: 'Check Repository',
       download: 'Download ZIP',
       infoHeader: 'Additional Project Information',
@@ -195,6 +200,8 @@ angular.module('hpApp')
           'A quick preview with information and link to the official page'
         ]
       },
+
+      pageInfo: '這些是我作過的一些項目, 更多詳細請去我的',
       checkRepo: '查看 Repository',
       download: '下載 ZIP',
       infoHeader: '更多情報',
@@ -241,6 +248,8 @@ angular.module('hpApp')
           'A quick preview with information and link to the official page'
         ]
       },
+
+      pageInfo: 'プロジェクト詳細のリンクは',
       checkRepo: 'チェック Repository',
       download: 'ダウンロード ZIP',
       infoHeader: '追加情報',
@@ -248,6 +257,21 @@ angular.module('hpApp')
       'front-end': 'フロントエンド',
       'back-end' : 'バックエンド'
     };
+
+    // *** Contact ***
+    en_us_dict.contact = {
+      contactHeader : 'Contact Me',
+      contactInfo: 'You can get in touch with me through: '
+    };
+    zh_tw_dict.contact = {
+      contactHeader : '連絡我',
+      contactInfo: '請使用以下提供的聯絡方式: '
+    };
+    ja_jp_dict.contact = {
+      contactHeader : '連絡',
+      contactInfo: 'この下の連絡方法を使ってください: '
+    };
+
     // *** Footer ***
     var languageName = {
       en_us: 'English',

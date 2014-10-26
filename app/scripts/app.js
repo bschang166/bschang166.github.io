@@ -19,6 +19,7 @@ angular
     'ngTouch'
   ])
   .constant('githubUsername', 'bschang166')
+  .constant('email', 'bschang166@gmail.com')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/home', {
