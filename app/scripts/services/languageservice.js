@@ -39,7 +39,7 @@ angular.module('hpApp')
     // *** Main ***
     en_us_dict.main = {
       intro: 'views/main_en_us.html',
-      tech : 'views/tech_en_us.html',
+      skill: 'My Skills',
       programLanguage : 'Programming Languages',
       framework : 'Frameworks',
       library : 'Libraries',
@@ -48,7 +48,7 @@ angular.module('hpApp')
     };
     zh_tw_dict.main = {
       intro: 'views/main_zh_tw.html',
-      tech : 'views/tech_zh_tw.html',
+      skill: '專業技術',
       programLanguage : '程序語言',
       framework : '程序框架',
       library : '程序庫',
@@ -57,7 +57,7 @@ angular.module('hpApp')
     };
     ja_jp_dict.main = {
       intro: 'views/main_ja_jp.html',
-      tech : 'views/tech_ja_jp.html',
+      skill: '専門技術',
       programLanguage : 'プログラミング言語',
       framework : 'フレームワーク',
       library : 'ライブラリ',
@@ -175,11 +175,10 @@ angular.module('hpApp')
       },
 
       25652256: {
-        info: 'The fundamentals of E-Commerce are implemented with AngularJS on the front-end, ' +
-          'and Parse.com used on the server-side for RESTful service. \n\n' +
-          'Users are able to add items to cart, edit cart, and place order using validated form.\n\n' +
-          'Admins are able to login in to admin interface to add, edit, remove item from catalog through REST service using angular resource module, ' +
-          'as well as examine customer orders and modify legitimately if necessary.',
+        info: '這是基於AngularJS前端和Parse.com後端所作的電子商務網站\n\n' +
+          '用戶能輕易的操作他個人專用的購物車, 不論是加入新商品還是更改購物車內容都非常簡單.\n\n' +
+          '填寫購物送貨詳細也是簡單明瞭, 帳單會自動檢察內容以保證送貨服務品質.\n\n' +
+          '管理人員能更改產品目錄, 也能檢查用戶帳單',
         tech : tech_eStore,
         image: [
           'Overview of the UI', 'Customers can edit their cart contents here', 'Customers enter shipping information, which is validated initially here on client-side',
@@ -187,8 +186,9 @@ angular.module('hpApp')
       },
 
       25647055 : {
-        info  : 'A media searcher that allows users to find their favorite media.\n\n' +
-          'AngularJS is used to manager data and for more flexible data formats and customizable views.',
+        info  : '這是一個多媒體搜索網頁\n\n' +
+          '用戶能利用這個網頁來找他們最喜歡的音樂\n\n' +
+          'AngularJS來管理資源和簡單自由定制用戶介面',
         tech  : tech_multimedia,
         image: [
           'Displays the top album ranking, parsed from RSS feed', 'Top song rankings', 'Search results are shown here',
@@ -221,6 +221,25 @@ angular.module('hpApp')
       25315292: {
         info: 'このプロジェクトの目的はRutgers Universityのオンラインキャンパス地図の改良です。',
         tech : tech_rumaps
+      },
+
+      25652256: {
+        info: 'AngularJSを使ったE-コマースアプリケーションです, サーバーはParse.com。\n\n' +
+          'ユーザーが簡単に編集できるショッピングカートフィーチャーと自動検査するフォーム。\n\n' +
+          '管理者界面にはアイテム目録とユーザーオーダー編集機能があります。',
+        tech : tech_eStore,
+        image: [
+          'Overview of the UI', 'Customers can edit their cart contents here', 'Customers enter shipping information, which is validated initially here on client-side',
+          'Customer gets a reference number for their orders', 'Login page', 'Admin interface for editing products', 'Admin can also check orders']
+      },
+
+      25647055 : {
+        info: '複合媒体検索のためのAngularJSアプリケーションです。',
+        tech : tech_multimedia,
+        image: [
+          'Displays the top album ranking, parsed from RSS feed', 'Top song rankings', 'Search results are shown here',
+          'A quick preview with information and link to the official page'
+        ]
       },
       checkRepo: 'チェック Repository',
       download: 'ダウンロード ZIP',

@@ -1,26 +1,4 @@
 
 <div ng-include="lookupTerm('intro')"></div>
 
-<div ng-controller="TechCtrl" >
-
-  <ng-include src="lookupTerm('tech')"></ng-include>
-
-  <pre>Find skills by category: {{selected | json}}</pre>
-  <input type="text" ng-model="selected" typeahead="keyword as keyword for keyword in techKeywords | filter:$viewValue | capitalize | limitTo:6"
-         class="form-control">
-
-  <tech-container tech-heading="{{lookupTerm('programLanguage')}}" tech-data="techList" search="selected" tech-filter="{keywords: 'language'}">
-  </tech-container>
-
-  <tech-container tech-heading="{{lookupTerm('framework')}}" tech-data="techList" search="selected" tech-filter="{keywords: 'framework'}">
-  </tech-container>
-
-  <tech-container tech-heading="{{lookupTerm('library')}}" tech-data="techList" search="selected" tech-filter="{keywords: 'library'}">
-  </tech-container>
-
-  <tech-container tech-heading="{{lookupTerm('database')}}" tech-data="techList" search="selected" tech-filter="{keywords: 'database'}">
-  </tech-container>
-
-  <tech-container tech-heading="{{lookupTerm('tool')}}" tech-data="techList" search="selected" tech-filter="{keywords: 'tool'}">
-  </tech-container>
-</div>
+<div ng-include="'views/skill.html'"></div>
