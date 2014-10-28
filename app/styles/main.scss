@@ -46,6 +46,19 @@ body {
   height: $headerInner-height;
   margin: 0px auto;
 }
+
+.logo {
+  float: left;
+  display: inline;
+  
+  img {
+    width: 200px;
+	height: $headerInner-height+10px;
+    max-width:100%;
+
+  }
+}
+
 // Header Navigation
 .nav-primary {
   float: right;

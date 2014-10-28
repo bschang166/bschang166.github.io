@@ -51,7 +51,7 @@ angular.module('hpApp')
         name : 'SQL',
         description: 'Programming language designed for data management in a relational database',
         url : 'http://en.wikipedia.org/wiki/SQL',
-        keywords: ['language', 'database']
+        keywords: ['language']
       },
       // ---------- Programming Languages End --------------
 

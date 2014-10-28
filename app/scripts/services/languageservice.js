@@ -38,7 +38,9 @@ angular.module('hpApp')
 
     // *** Main ***
     en_us_dict.main = {
-      intro: 'views/main_en_us.html',
+      intro: 'views/intro_en_us.html',
+      resume: 'files/resume.pdf',
+
       skillHeader: 'My Skills',
       skillInfo: 'Looking for a specific set of skills? Try the search bar below for a quick match!',
       programLanguage : 'Programming Languages',
@@ -48,7 +50,9 @@ angular.module('hpApp')
       tool : 'Tools'
     };
     zh_tw_dict.main = {
-      intro: 'views/main_zh_tw.html',
+      intro: 'views/intro_zh_tw.html',
+      resume: 'files/resume.pdf',
+
       skillHeader: '專業技術',
       skillInfo: '請用下面的功能來搜尋您所需要的技術.',
       programLanguage : '程序語言',
@@ -58,7 +62,9 @@ angular.module('hpApp')
       tool : '工具'
     };
     ja_jp_dict.main = {
-      intro: 'views/main_ja_jp.html',
+      intro: 'views/intro_ja_jp.html',
+      resume: 'files/resume.pdf',
+
       skillHeader: '専門技術',
       skillInfo : '特定のスキルが欲しい？　下の検索機能を試してみてください！',
       programLanguage : 'プログラミング言語',
@@ -163,7 +169,10 @@ angular.module('hpApp')
         info: '這是我用了AngularJS寫的Github用戶網頁.\n\n' +
           '主要是以Yeoman製作AngularJS的骨架, Grunt自動化一些工作, 還有Bower管理資源.\n\n' +
           'Github REST API 用來讀取我的Github repository.\n\n',
-        tech : tech_bschang166
+        tech : tech_bschang166,
+        image: [
+          '首頁', '項目'
+        ]
       },
 
       25315226: {
@@ -171,12 +180,19 @@ angular.module('hpApp')
           '主要是用了Socket.IO和Node.js伺服器來處理即時性的多人線上互動需求.\n\n' +
           '當時的目標是作一個類似線上即時通訊加上遊戲性的網頁, 能通過伺服器讓很多人同時一起互動並且得到即時反應.\n\n' +
           '基本的功能已經完成, 包括伺服器和瀏覽器的通訊加上非常簡單的遊戲系統.',
-        tech : tech_hackru_2014
+        tech : tech_hackru_2014,
+        image: [
+          '整體的介面', '示意玩家需要採取行動以得分數', '當新的玩家加入或是得分數時系統會自動即時更新'
+        ]
       },
 
       25315292: {
         info: '這個項目的目標是改進Rutgers University的線上地圖.',
-        tech : tech_rumaps
+        tech : tech_rumaps,
+        image: [
+          '地圖介面', '利用Typeahead來輕鬆尋找校內地點', '地圖上標示用戶在尋找的地點',
+          '使用過濾器來快速尋找相似的地點'
+        ]
       },
 
       25652256: {
@@ -186,8 +202,8 @@ angular.module('hpApp')
           '管理人員能更改產品目錄, 也能檢查用戶帳單',
         tech : tech_eStore,
         image: [
-          'Overview of the UI', 'Customers can edit their cart contents here', 'Customers enter shipping information, which is validated initially here on client-side',
-          'Customer gets a reference number for their orders', 'Login page', 'Admin interface for editing products', 'Admin can also check orders']
+          '客戶介面', '客戶能在這裡更改購物車的內容', '前端系統會自動地檢查客戶的送貨資料',
+          '客戶會得到帳單參考號碼', '登入網頁', '管理人的介面,能更改線上商品', '管理者也能查看客戶帳單']
       },
 
       25647055 : {
@@ -196,8 +212,8 @@ angular.module('hpApp')
           'AngularJS來管理資源和簡單自由定制用戶介面',
         tech  : tech_multimedia,
         image: [
-          'Displays the top album ranking, parsed from RSS feed', 'Top song rankings', 'Search results are shown here',
-          'A quick preview with information and link to the official page'
+          '解析並顯示從RSS Feed得來的專輯排行榜的情報', '單曲音樂的排行榜', '搜索的結果',
+          '歌曲的預覽和情報, 加上公式網站的鏈接'
         ]
       },
 
@@ -214,7 +230,10 @@ angular.module('hpApp')
         info : 'ここのプロジェクトはAngularJSで作ったGithubユーザーページです。\n\n' +
           '主にYeomanを使ってAngularJSの骨架を生産、Gruntで作業を自動化、あとはBowerでクライアント資源の管理。\n\n' +
           '個人Github RepositoriesのアクセスやロードはGithub REST APIで可能。',
-        tech : tech_bschang166
+        tech : tech_bschang166,
+        image: [
+          'ホーム','プロジェクト'
+        ]
       },
 
       25315226: {
@@ -222,12 +241,19 @@ angular.module('hpApp')
           '大規模なユーザーインタアクションを予想して選んだのは、Socket.IOとNode.jsサーバーです。\n\n' +
           '当時の目標はたくさんのユーザーの行動やインプットをリアルタイムで処理と回答。\n\n' +
           '基本の機能は完成した、サーバーとクライアントの通信と簡単なゲームシステムもコンプリート。',
-        tech : tech_hackru_2014
+        tech : tech_hackru_2014,
+        image: [
+          '全体界面', 'プレイヤーの行動でスコアを増やす', '他のプレイヤーのスコアはリアルタイムで更新する'
+        ]
       },
 
       25315292: {
         info: 'このプロジェクトの目的はRutgers Universityのオンラインキャンパス地図の改良です。',
-        tech : tech_rumaps
+        tech : tech_rumaps,
+        image: [
+          'マップのユーザー界面', 'Typeaheadでのキャンパス検索', '選んだ場所はマップ上で表示します',
+          'クイックサーチを使って類似した場所を検索'
+        ]
       },
 
       25652256: {
@@ -236,16 +262,16 @@ angular.module('hpApp')
           '管理者界面にはアイテム目録とユーザーオーダー編集機能があります。',
         tech : tech_eStore,
         image: [
-          'Overview of the UI', 'Customers can edit their cart contents here', 'Customers enter shipping information, which is validated initially here on client-side',
-          'Customer gets a reference number for their orders', 'Login page', 'Admin interface for editing products', 'Admin can also check orders']
+          'ユーザー界面', 'カスタマーカートの編集界面', '出荷情報のエラーはフロントで自動チェックします',
+          'カスタマーオーダーの参照ナンバー', 'ログインページ', '管理者界面のアイテム目録編集', '管理者界面のユーザーオーダー編集']
       },
 
       25647055 : {
         info: '複合媒体検索のためのAngularJSアプリケーションです。',
         tech : tech_multimedia,
         image: [
-          'Displays the top album ranking, parsed from RSS feed', 'Top song rankings', 'Search results are shown here',
-          'A quick preview with information and link to the official page'
+          'RSSを解析して、その情報をユーザーに表示する', 'トップランキング', '検索結果',
+          '選んだソングのプレビューと公式サイトのリンク'
         ]
       },
 
