@@ -12,7 +12,7 @@ angular.module('hpApp')
 
     var reposCountPerRow = 3;
     $scope.githubUsername = githubUsername;
-    $scope.reposGroups;
+    $scope.reposGroups = null;
 
     $scope.getRepos = function(){
       githubRepoService.getRepos(function(reposData){

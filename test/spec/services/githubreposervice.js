@@ -11,8 +11,5 @@ describe('Service: githubRepoService', function () {
     githubRepoService = _githubRepoService_;
   }));
 
-  it('should do something', function () {
-    expect(!!githubRepoService).toBe(true);
-  });
 
 });

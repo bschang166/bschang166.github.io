@@ -11,8 +11,5 @@ describe('Service: techService', function () {
     techService = _techService_;
   }));
 
-  it('should do something', function () {
-    expect(!!techService).toBe(true);
-  });
 
 });

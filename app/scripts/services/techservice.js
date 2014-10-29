@@ -51,7 +51,7 @@ angular.module('hpApp')
         name : 'SQL',
         description: 'Programming language designed for data management in a relational database',
         url : 'http://en.wikipedia.org/wiki/SQL',
-        keywords: ['language', 'database']
+        keywords: ['language']
       },
       // ---------- Programming Languages End --------------
 
@@ -128,6 +128,13 @@ angular.module('hpApp')
         url: 'http://expressjs.com/',
         keywords: ['javascript', 'framework', 'node.js', 'server-side', 'back-end']
       },
+	  xampp: {
+        name : 'XAMPP',
+        description: 'Cross-platform web server stack',
+        url : 'https://www.apachefriends.org/',
+        keywords: ['tool']
+      },
+	  
       githubpages: {
         name : 'GitHub Pages',
         description: 'Host for webpages through GitHub',
@@ -159,6 +166,12 @@ angular.module('hpApp')
         url: 'https://developer.github.com/v3/',
         keywords: ['javascript', 'api', 'github', 'client-side', 'front-end']
       },
+	  photoshop: {
+        name : 'Adobe Photoshop',
+        description: 'An software for design and editing',
+        url : 'http://adobe.com/products/photoshop.html',
+        keywords: ['tool']
+      },
 
       parse : {
         name: 'Parse (Core)',
@@ -172,5 +185,5 @@ angular.module('hpApp')
       getTechList : function(){
         return techList;
       }
-    }
+    };
   });

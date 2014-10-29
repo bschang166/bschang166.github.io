@@ -15,7 +15,7 @@ angular.module('hpApp')
         var lowercase = input.toLowerCase();
         return lowercase.substring(0,1).toUpperCase() + lowercase.substring(1);
       } else {
-        return "";
+        return '';
       }
     };
 

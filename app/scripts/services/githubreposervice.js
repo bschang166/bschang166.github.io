@@ -31,7 +31,7 @@ angular.module('hpApp')
     _initializeReposData();
 
     var broadcastReposData = function(){
-      $rootScope.$broadcast('githubRepoService.ready', repos)
+      $rootScope.$broadcast('githubRepoService.ready', repos);
     };
 
     var getRepos = function(callback){

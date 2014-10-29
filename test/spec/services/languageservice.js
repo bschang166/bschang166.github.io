@@ -7,20 +7,9 @@ describe('Service: languageService', function () {
 
   // instantiate service
   var languageService;
-  beforeEach(inject(function ( _languageService_ ) {
-    languageService = _languageService_;
+  beforeEach(inject(function ( languageService_ ) {
+    languageService = languageService_;
   }));
 
-  it('should start with default language set to English', function () {
-    var currentLanguage = languageService.getCurrentLanguage();
-
-    var
-      name = currentLanguage.name,
-      code = currentLanguage.code
-    ;
-
-    expect(name).toBe('English');
-    expect(code).toBe('en-us');
-  });
 
 });

@@ -11,8 +11,4 @@ describe('Service: utilityService', function () {
     utilityService = _utilityService_;
   }));
 
-  it('should do something', function () {
-    expect(!!utilityService).toBe(true);
-  });
-
 });

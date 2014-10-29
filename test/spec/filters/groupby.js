@@ -10,10 +10,4 @@ describe('Filter: groupby', function () {
   beforeEach(inject(function ($filter) {
     groupby = $filter('groupby');
   }));
-
-  it('should return the input prefixed with "groupby filter:"', function () {
-    var text = 'angularjs';
-    expect(groupby(text)).toBe('groupby filter: ' + text);
-  });
-
 });
