@@ -33,7 +33,7 @@ angular.module('hpApp')
         name : 'PHP',
         description: 'A server-side scripting language',
         url : 'http://php.net/',
-        keywords: ['language', 'back-end', 'server-side']
+        keywords: ['language', 'php', 'back-end', 'server-side']
       },
       html: {
         name : 'HTML',
@@ -116,6 +116,12 @@ angular.module('hpApp')
         url: 'https://www.npmjs.org/',
         keywords: ['javascript', 'dependency', 'management', 'manager', 'server-side', 'back-end', 'tool']
       },
+	  composer : {
+        name: 'Composer',
+        description: 'Dependency Manager for PHP ',
+        url: 'https://getcomposer.org/',
+        keywords: ['php', 'dependency', 'management', 'manager', 'server-side', 'back-end', 'tool']
+      },
       nodejs: {
         name: 'Node.js',
         description: 'An open-source runtime environment for the server-side',
@@ -132,8 +138,14 @@ angular.module('hpApp')
         name : 'XAMPP',
         description: 'Cross-platform web server stack',
         url : 'https://www.apachefriends.org/',
-        keywords: ['tool']
+        keywords: ['php','tool']
       },
+	  laravel: {
+	    name:'Laravel',
+		description: 'A PHP framework',
+		url : 'http://laravel.com/',
+		keywords: ['php','framework', 'server-side', 'back-end']
+	  },
 	  
       githubpages: {
         name : 'GitHub Pages',

@@ -20,8 +20,10 @@ angular
   ])
   .constant('githubUsername', 'bschang166')
   .constant('email', 'bschang166@gmail.com')
-  .config(function ($routeProvider) {
-    $routeProvider
+  .config(function ($routeProvider, $logProvider) {
+    $logProvider.debugEnabled(false);
+	
+	$routeProvider
       .when('/home', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
